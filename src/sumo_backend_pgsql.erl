@@ -81,7 +81,7 @@ init(Options) ->
   Opts = [
     {port,     proplists:get_value(port,     Options, 5432)},
     {database, proplists:get_value(database, Options)},
-    {ssl, proplists:get_value(database, Options, false)},
+    {ssl, proplists:get_value(ssl, Options, false)},
     {ssl_opts, [
       {verify, proplists:get_value(verify, Options, verify_none)},
       {cacertfile, proplists:get_value(cacertfile, Options)}
